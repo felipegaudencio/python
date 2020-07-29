@@ -1,0 +1,5 @@
+import os.path
+if os.path.exists("C:\PSTool1s"):
+     print("O diretório existe.")
+else:
+     print("O diretório não existe.")
