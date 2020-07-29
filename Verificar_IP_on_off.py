@@ -12,4 +12,4 @@ with open(os.devnull, "wb") as limbo:
         else:
             arq2 = open("C:/Python38/test/on.txt", "a")
             arq2.write("192.168.1.{0}\n".format(n))
-            arq2.close()
+arq2.close()
