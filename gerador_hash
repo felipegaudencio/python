@@ -1,0 +1,37 @@
+import hashlib
+
+a = input("Deseja gerar o hash?\n(S) para Sim ou (N) para Não: \n\n")
+aa = a.upper()
+
+while (aa == 'S'):
+
+    string = input("Digite o texto a ser gerado: ")
+
+    menu = int(input(''' ### MANU ###
+            1) MD5
+            2) SHA1
+            3) SHA256
+            4) SHA512
+            Digite o número do hash a ser gerado: '''))
+
+
+    if menu == 1:
+        resultado = hashlib.md5(string.encode('utf-8'))
+        print('A hash MD5 da string é: ', resultado.hexdigest())
+        aa = input("Deseja gerar o hash: ")
+    elif menu == 2:
+        resultado = hashlib.sha1(string.encode('utf-8'))
+        print('A hash SHA1 da string é: ', resultado.hexdigest())
+        aa = input("Deseja gerar o hash: ")
+    elif menu == 3:
+        resultado = hashlib.sha256(string.encode('utf-8'))
+        print('A hash SHA256 da string é: ', resultado.hexdigest())
+        aa = input("Deseja gerar o hash: ")
+    elif menu == 4:
+        resultado = hashlib.sha512md5(string.encode('utf-8'))
+        print('A hash SHA512 da string é: ', resultado.hexdigest())
+        aa = input("Deseja gerar o hash: ")
+    else:
+        print('Algo de errado')
+else:
+    print('Saindo')
